@@ -1,22 +1,37 @@
 pipeline {
     agent any
 
+    tools {
+        git 'Default'
+    }
+
     stages {
-        stage('Build') {
+
+        stage('Checkout Code') {
             steps {
-                echo 'Building the project...'
+                echo 'Pulling code from GitHub...'
+                checkout scm
             }
         }
 
-        stage('Test') {
+        stage('Build Step') {
             steps {
-                echo 'Running tests...'
+                echo 'Simulating build process...'
+                sh 'echo "Build successful!"'
             }
         }
 
-        stage('Deploy') {
+        stage('Test Step') {
             steps {
-                echo 'Deploying application...'
+                echo 'Running test simulation...'
+                sh 'echo "All tests passed!"'
+            }
+        }
+
+        stage('Deploy Step') {
+            steps {
+                echo 'Simulating deployment...'
+                sh 'echo "Deployment completed!"'
             }
         }
     }
