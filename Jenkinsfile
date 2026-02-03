@@ -1,37 +1,22 @@
 pipeline {
     agent any
 
-    tools {
-        git 'Default'
-    }
-
     stages {
-
         stage('Checkout Code') {
             steps {
-                echo 'Pulling code from GitHub...'
-                checkout scm
+                git branch: 'main', url: 'https://github.com/YOUR-USERNAME/devops-practice.git'
             }
         }
 
-        stage('Build Step') {
+        stage('Install Dependencies') {
             steps {
-                echo 'Simulating build process...'
-                sh 'echo "Build successful!"'
+                sh 'npm install'
             }
         }
 
-        stage('Test Step') {
+        stage('Run App') {
             steps {
-                echo 'Running test simulation...'
-                sh 'echo "All tests passed!"'
-            }
-        }
-
-        stage('Deploy Step') {
-            steps {
-                echo 'Simulating deployment...'
-                sh 'echo "Deployment completed!"'
+                sh 'node app.js &'
             }
         }
     }
