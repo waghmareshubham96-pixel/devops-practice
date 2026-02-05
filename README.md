@@ -9,3 +9,5 @@ This repository is part of my hands-on DevOps learning journey.
 - Day 2: Branching and Pull Requests
 
 More updates coming soon as I continue learning CI/CD, Jenkins, and Terraform!
+
+Doing it my own !!!
