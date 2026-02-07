@@ -21,5 +21,6 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: CI check (do NOT run server)
-        run: echo "CI pipeline completed successfully ✅"
+      - name: PR check message
+        run: echo "Running CI on Pull Request 🚀"
+
