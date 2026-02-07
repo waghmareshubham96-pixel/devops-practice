@@ -1,4 +1,4 @@
-name: CI Lab – System Info
+name: CI – Node.js App
 
 on:
   push:
@@ -6,18 +6,20 @@ on:
       - main
 
 jobs:
-  system-check:
+  node-ci:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Show OS details
-        run: uname -a
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
 
-      - name: Show current directory
-        run: pwd
+      - name: Install dependencies
+        run: npm install
 
-      - name: List repository files
-        run: ls -la
+      - name: Run Node app
+        run: node app.js
