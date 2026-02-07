@@ -1,20 +1,3 @@
-name: My First CI Pipeline
-
-on:
-  push:
-    branches:
-      - main
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Print a message
-        run: echo "Hello Shubham! Your first GitHub Action is running 🚀"
 name: CI Lab – System Info
 
 on:
