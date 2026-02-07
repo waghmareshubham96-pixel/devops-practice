@@ -15,3 +15,26 @@ jobs:
 
       - name: Print a message
         run: echo "Hello Shubham! Your first GitHub Action is running 🚀"
+name: CI Lab – System Info
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  system-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Show OS details
+        run: uname -a
+
+      - name: Show current directory
+        run: pwd
+
+      - name: List repository files
+        run: ls -la
