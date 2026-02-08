@@ -21,4 +21,4 @@ jobs:
         run: npm install
 
       - name: CI check
-        run: echo "CI fixed 🎉"
+        run: echo "CI fixed"
