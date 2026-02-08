@@ -22,3 +22,6 @@ jobs:
 
       - name: Run tests
         run: echo "Tests passed ✅"
+      
+      - name: Fail CI intentionally
+        run: exit 1
