@@ -20,5 +20,5 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Run tests
-        run: echo "Tests passed ✅"
+      - name: CI check
+        run: exit 1
