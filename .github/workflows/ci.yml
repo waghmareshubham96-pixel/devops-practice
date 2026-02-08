@@ -19,7 +19,7 @@ jobs:
           node-version: 18
 
       - name: Install dependencies
-        run: npm install
+        run: npm install (missing 1)
 
       - name: CI check
         run: echo "CI fixed 🎉"
