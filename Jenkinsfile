@@ -2,21 +2,21 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout Code') {
+        stage('Build') {
             steps {
-                git branch: 'main', url: 'https://github.com/YOUR-USERNAME/devops-practice.git'
+                echo 'Build stage running'
             }
         }
 
         stage('Install Dependencies') {
             steps {
-                sh 'npm install'
+                echo 'Install dependencies stage running'
             }
         }
 
         stage('Run App') {
             steps {
-                sh 'node app.js &'
+                echo 'Run app stage running'
             }
         }
     }
