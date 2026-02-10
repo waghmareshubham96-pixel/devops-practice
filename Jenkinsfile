@@ -10,7 +10,7 @@ pipeline {
 
         stage('Install Dependencies') {
             steps {
-                sh 'exit 1'
+                echo 'Install dependencies stage running''
             }
         }
 
