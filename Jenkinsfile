@@ -2,11 +2,10 @@ pipeline {
     agent any
 
     stages {
-        stage('Exit 0 Test') {
+        stage('Command Failure') {
             steps {
-                sh 'echo "Running command"'
-                sh 'exit 1'
-                echo 'Stage completed'
+                sh 'somewrongcommand'
+                echo 'You will not see this'
             }
         }
     }
