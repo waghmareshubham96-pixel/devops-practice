@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Command Failure') {
             steps {
-                sh 'somewrongcommand'
+                sh 'exit 1'
                 echo 'You will not see this'
             }
         }
