@@ -2,21 +2,11 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('Exit 0 Test') {
             steps {
-                echo 'Build stage running'
-            }
-        }
-
-        stage('Install Dependencies') {
-            steps {
-                echo 'Install dependencies stage running'
-            }
-        }
-
-        stage('Run App') {
-            steps {
-                echo 'Run app stage running'
+                sh 'echo "Running command"'
+                sh 'exit 0'
+                echo 'Stage completed'
             }
         }
     }
