@@ -15,10 +15,4 @@ Doing it my own !!!
 Testing
 
 git checkout main
-git pull origin main
-
-Let Play 
-
-Hello Team
-
-Hi Akshay
+git pull origin Main
