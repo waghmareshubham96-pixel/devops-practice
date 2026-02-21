@@ -15,10 +15,6 @@ Doing it my own !!!
 Testing
 
 git checkout main
-git pull origin main
+git pull origin Main
 
-Let Play 
-
-Hello Team
-
-Hi Akshay
+This is shubham
